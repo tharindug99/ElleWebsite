@@ -7,7 +7,7 @@ import img4 from '../src/assets/images/AllinOne.png'
 import Footer from '../components/footer/Footer';
 
 
-const Services = () => {
+const TeamInfo = () => {
   return (
     <>
     <div className="container">
@@ -48,4 +48,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default TeamInfo

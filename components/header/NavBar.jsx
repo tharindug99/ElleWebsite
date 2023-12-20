@@ -23,16 +23,16 @@ const NavigationLinks = ({ links }) => {
 const Navbar = () => {
   const navLinks = [
     {
+      path: '/Official_Info',
+      display: 'Official Info',
+    },
+    {
       path: '/home',
       display: 'Home',
     },
     {
-      path: '/services',
+      path: '/TeamInfo',
       display: 'Teams',
-    },
-    {
-      path: '/contact',
-      display: 'Official Info',
     },
     {
       path: '/login',

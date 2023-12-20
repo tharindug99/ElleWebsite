@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import Home from '../pages/Home';
-import Contact from '../pages/Contact';
+import OfficialInfo from '../pages/OfficialInfo';
 import Login from '../pages/Login';
 import SignUp from '../pages/SignUp';
-import Services from '../pages/Services';
+import TeamInfo from '../pages/TeamInfo';
 import Doctors from '../pages/Doctors/Doctors';
 import DoctorDetails from '../pages/Doctors/DoctorDetails';
 
@@ -19,8 +19,8 @@ const Routers = () => {
       <Route path="/doctors/:id" element={<DoctorDetails/>}></Route>
       <Route path="/login" element={<Login/>}></Route>
       <Route path="/register" element={<SignUp/>}></Route>
-      <Route path="/contact" element={<Contact/>}></Route>
-      <Route path="/services" element={<Services/>}></Route>  
+      <Route path="/Official_Info" element={<OfficialInfo/>}></Route>
+      <Route path="/TeamInfo" element={<TeamInfo/>}></Route>  
     </Routes>
   )
 }
