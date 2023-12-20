@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/footer/Footer';
 
 export default function Login() {
   const handleSubmit = (event) => {
@@ -11,6 +12,7 @@ export default function Login() {
   };
 
   return (
+    <>
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
       <div className="bg-white p-8 rounded shadow-md max-w-md w-full">
         <div className="text-center">
@@ -87,6 +89,9 @@ export default function Login() {
           {'.'}
         </p>
       </div>
+      
     </div>
+    <Footer/>
+    </>
   );
 }

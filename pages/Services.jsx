@@ -4,11 +4,12 @@ import img1 from '../src/assets/images/online-medical-support.png'
 import img2 from '../src/assets/images/ambulance.png'
 import img3 from '../src/assets/images/quickResponse.png'
 import img4 from '../src/assets/images/AllinOne.png'
-
+import Footer from '../components/footer/Footer';
 
 
 const Services = () => {
   return (
+    <>
     <div className="container">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:m-60 md:m-30 sm:m-20 lg:grid-cols-2 gap-5 mt-5 pb-20 lg:mt-10">
             <div className="flex flex-col items-center bg-cyan-600 rounded-lg p-5">
@@ -40,7 +41,10 @@ const Services = () => {
             </div>
 
           </div>
+          
     </div>
+    <Footer/>
+    </>
   )
 }
 

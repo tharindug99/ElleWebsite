@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/footer/Footer';
 
 const SignUp = () => {
   const handleSubmit = (event) => {
@@ -13,6 +14,7 @@ const SignUp = () => {
   };
 
   return (
+    <>
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300">
       <div className="bg-white p-8 rounded shadow-md max-w-xs w-full">
         <div className="text-center">
@@ -112,7 +114,10 @@ const SignUp = () => {
           </div>
         </form>
       </div>
+      
     </div>
+    <Footer/>
+    </>
   );
 };
 

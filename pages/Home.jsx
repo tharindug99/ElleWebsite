@@ -8,12 +8,12 @@ import img4 from '../src/assets/images/services.png'
 import About from '../components/about/About';
 import DoctorList from '../components/doctors/DoctorList';
 import Doctors from './Doctors/Doctors';
-
+import Footer from '../components/footer/Footer';
 const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero__section pt-[36px] 2xl:h-[800px]">
+      <div className="hero__section pt-[36px] 2xl:h-[800px]">
         <div className="container px-10">
           <div className="flex flex-col lg:flex-row gap-[90px] items-center justify-between">
             {/* hero content */}
@@ -157,7 +157,8 @@ const Home = () => {
             </div>
 
             <Doctors/>
-      </section>
+            <Footer/>
+      </div>
 
       
     </>

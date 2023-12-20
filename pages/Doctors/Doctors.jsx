@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DoctorCard from '../../components/doctors/DoctorCard';  // Update the path based on your project structure
 import img1 from '../../src/assets/images/doc.png'
+import Footer from '../../components/footer/Footer';
 
 const Doctors = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -44,6 +45,7 @@ const Doctors = () => {
   const allProfessions = ['All', ...new Set(doctorsList.map(doctor => doctor.profession))];
 
   return (
+    <>
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full lg:w-[1440px] md:w-[760px] sm:w-96">
         <h2 className="text-2xl font-bold mb-4 text-center">Doctors</h2>
@@ -75,7 +77,10 @@ const Doctors = () => {
           ))}
         </div>
       </div>
+      
     </div>
+    
+    </>
   );
 };
 
