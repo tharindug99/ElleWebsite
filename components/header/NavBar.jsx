@@ -27,16 +27,12 @@ const Navbar = () => {
       display: 'Home',
     },
     {
-      path: '/doctors',
-      display: 'Find a Doctor',
-    },
-    {
       path: '/services',
-      display: 'Services',
+      display: 'Teams',
     },
     {
       path: '/contact',
-      display: 'Contact',
+      display: 'Official Info',
     },
     {
       path: '/login',
@@ -92,7 +88,7 @@ const Navbar = () => {
     >
       <div className="h-10vh flex flex-col lg:flex-row justify-between z-50 text-cyan-900 lg:py-5 px-20 py-4">
         <div className="flex items-center">
-          <span className="text-3xl font-bold px--4">MediFlex</span>
+          <span className="text-3xl font-bold px--4">Elle</span>
           <div className="lg:hidden md:hidden flex items-center ml-24 justify-end font-normal">
             <button className="text-2xl px-4" onClick={toggleMobileMenu}>
               &#9776; {/* Hamburger Icon */}
