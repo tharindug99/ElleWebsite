@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Footer from '../components/footer/Footer';
-import TechniqueVideo from '../components/ElleVideos/TechniqueVideo';
+import Coaches_Referee from '../pages/Coaches_Referee';
 import RuleVideo from '../components/ElleVideos/RuleVideo';
 import Videos from '../components/ElleVideos/Videos'
 
@@ -49,7 +49,7 @@ const OfficialInfo = () => {
       )}
       {activeTab === 'volunteer' && (
         <div>
-          <RuleVideo />
+          <Coaches_Referee />
         </div>
       )}
 

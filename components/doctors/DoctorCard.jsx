@@ -16,7 +16,7 @@ const DoctorCard = ({ doctor }) => {
   } = doctor;
 
   return (
-    <div className="doctor-card p-3 lg:p-5 bg-white shadow-xl border-white border-2 rounded-xl shadow-lg">
+    <div className="doctor-card p-3 lg:p-5 bg-white shadow-xl border-white border-2 rounded-xl">
       <div className="image-container flex justify-center items-center ">
         <img src={photo} className="w-1/2 h-1/2" alt="" />
       </div>
