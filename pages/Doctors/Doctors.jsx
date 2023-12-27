@@ -59,16 +59,6 @@ const Doctors = () => {
           className="w-full px-3 py-2 border rounded-md mb-4"
         />
 
-        {/* Profession Filter */}
-        <select
-          value={selectedFilter}
-          onChange={(e) => setSelectedFilter(e.target.value)}
-          className="w-full px-3 py-2 border rounded-md mb-4"
-        >
-          {allProfessions.map((profession, index) => (
-            <option key={index} value={profession}>{profession}</option>
-          ))}
-        </select>
 
         {/* Display Doctor Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

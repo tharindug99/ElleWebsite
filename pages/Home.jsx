@@ -1,4 +1,7 @@
 import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import heroImage from '../src/assets/images/doc.png'; // Replace with the actual path to your image
 import img1 from '../src/assets/images/Doctors-rafiki.png'
@@ -10,6 +13,8 @@ import DoctorList from '../components/doctors/DoctorList';
 import Doctors from './Doctors/Doctors';
 import Footer from '../components/footer/Footer';
 const Home = () => {
+
+  
   return (
     <>
       {/* Hero Section */}
@@ -17,45 +22,8 @@ const Home = () => {
         <div className="container px-10">
           <div className="flex flex-col lg:flex-row gap-[90px] items-center justify-between">
             {/* hero content */}
-            <div className="flex flex-col lg:flex-row gap-5 items-center">
-              {/* Left Section */}
-              <div className="lg:w-[570px] space-y-10">
-                <h1 className="text-[36px] leading-[46px] font-[700] md:text-[60px] md:leading-[70px]">
-                  We help patients live a longer, healthier life
-                </h1>
-
-                <p className="text_para w-full lg:w-[800px]">
-                  "Empowering over 1,000 individuals to realize their optimal health and wellness, we stand as a beacon of transformative care in the medical field. Our unwavering commitment to your health goals is at the heart of our mission. With a dedicated team of experienced healthcare professionals, we have been instrumental in guiding our patients on a journey toward vitality and well-being. Your health is our priority, and we take pride in being a trusted partner on your path to a healthier, happier life. Welcome to a medical experience designed to inspire, support, and lead you towards a brighter, healthier future."
-                </p>
-
-                <button className='p-4 rounded-2xl bg-blue-600 text-white'>
-                  Request an appointment
-                </button>
-
-                
-              </div>
-
-              {/* Right Section - Image */}
-              <div className="mt-8 lg:mt-0">
-                <img
-                  src={heroImage}
-                  alt="Hero Image"
-                  className="rounded-lg mx-auto mb-8 lg:ml-60 lg:mb-20 shadow-lg"
-                  style={{
-                    width: '500px',
-                    height: '100%',
-                    // Adjust dimensions for lg screens
-                    '@media (min-width: 1024px)': {
-                      width: '500px',
-                      height: '500px',
-                    },
-                    '@media (max-width: 767px)': {
-                      width: '300px',
-                      height: '300px',
-                    },
-                  }}
-                />
-              </div>
+            <div className="flex flex-col lg:flex-row items-center">
+            
             </div>
           </div>
 
