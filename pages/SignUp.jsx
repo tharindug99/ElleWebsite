@@ -1,16 +1,33 @@
 import React from 'react';
 import Footer from '../components/footer/Footer';
+import { useState } from 'react';
+import axios from 'axios';
 
 const SignUp = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      firstName: data.get('firstName'),
-      lastName: data.get('lastName'),
-      email: data.get('email'),
-      password: data.get('password'),
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    try {
+      await axios.post("http://localhost:5173/register", formData);
+      console.log("Signup successful");
+    } catch (error) {
+      console.log("error in domain");
+      alert('Error! Please fill in all fields');
+    }
   };
 
   return (
@@ -29,7 +46,7 @@ const SignUp = () => {
           </svg>
           <h1 className="text-2xl font-semibold mt-2">Sign up</h1>
         </div>
-        <form onSubmit={handleSubmit} className="mt-3">
+        <form action="POST" onSubmit={handleSubmit} className="mt-3">
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="firstName" className="block text-gray-700 text-sm font-medium">
