@@ -22,14 +22,14 @@ const RuleVideo = () => {
 
   return (
     <div>
-      <div className="container mx-7 bg-teal-700 rounded-sm">
-      <h1 className="text-[36px] text-white p-5 leading-[46px] font-[700] md:text-[60px] md:leading-[70px]">
+      <div className="container mx-7 bg-white rounded-sm shadow-lg">
+      <h1 className="text-[36px] text-black p-5 leading-[46px] font-[700] md:text-[60px] md:leading-[70px]">
                   Elle Rules
                 </h1>
 
         <div className="my-20 gap-x-4 mx-5 mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-center">
           {Videos.map((video) => (
-            <div key={video.id} className="col-span-1 bg-white rounded-lg my-3 p-2 flex flex-col justify-center items-center">
+            <div key={video.id} className="col-span-1 bg-white shadow-xl rounded-lg my-3 p-2 flex flex-col justify-center items-center">
               
               <div style={{ maxWidth: 'auto', height: 'auto' }}>
                 <YouTube videoId={video.videoId} opts={opts} />

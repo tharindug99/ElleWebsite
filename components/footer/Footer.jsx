@@ -9,58 +9,50 @@ const Footer = () => {
             <li class="w-1/2 md:w-1/3 lg:w-1/3">
                 <div class="text-center">
                     <h2 class="text-gray-500 dark:text-gray-200 text-md uppercase mb-4">
-                        Components
+                        Top Player
                     </h2>
                     <ul>
                         <li class="mb-4 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
                             <a href="#">
-                                Elements
+                                School Level
                             </a>
                         </li>
                         <li class="mb-4 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
                             <a href="#">
-                                Forms
+                                University Level
                             </a>
                         </li>
                         <li class="mb-4 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
                             <a href="#">
-                                Commerces
+                                National Level
                             </a>
                         </li>
-                        <li class="mb-4 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
-                            <a href="#">
-                                Navigation
-                            </a>
-                        </li>
+                        
                     </ul>
                 </div>
             </li>
             <li class="w-1/2 md:w-1/3 lg:w-1/3">
                 <div class="text-center">
                     <h2 class="text-gray-500 dark:text-gray-200 text-md uppercase mb-4">
-                        Contacts
+                        Top Team
                     </h2>
                     <ul>
                         <li class="mb-4 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
                             <a href="#">
-                                Github
+                                School Level
                             </a>
                         </li>
                         <li class="mb-4 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
                             <a href="#">
-                                Facebook
+                                University Level
                             </a>
                         </li>
                         <li class="mb-4 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
                             <a href="#">
-                                Twitter
+                            National Level
                             </a>
                         </li>
-                        <li class="mb-4 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white">
-                            <a href="#">
-                                LinkedIn
-                            </a>
-                        </li>
+                
                     </ul>
                 </div>
             </li>
@@ -137,7 +129,7 @@ const Footer = () => {
                 </form>
             </div>
             <div class="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
-                Created by Charlie
+                Created by TNG Productions &copy;
             </div>
         </div>
     </footer>

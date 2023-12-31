@@ -4,32 +4,20 @@ import { useState } from 'react';
 import axios from 'axios';
 
 const SignUp = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-  });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const [FirstName, setFirstName]=useState('');
+  const [LastName, setLastName]=useState('');
+  const [email,setEmail]=useState('');
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios.post('http://localhost:5173/register',{FirstName, LastName, email, password})
+    .then(result => console.log(result))
+    .catch(err => console.log(err))
+  }
   
-    try {
-      await axios.post("http://localhost:5173/register", formData);
-      console.log("Signup successful");
-    } catch (error) {
-      console.log("error in domain");
-      alert('Error! Please fill in all fields');
-    }
-  };
-
   return (
     <>
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300">
@@ -46,10 +34,11 @@ const SignUp = () => {
           </svg>
           <h1 className="text-2xl font-semibold mt-2">Sign up</h1>
         </div>
-        <form action="POST" onSubmit={handleSubmit} className="mt-3">
+        <form onSubmit={handleSubmit} className="mt-3">
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label htmlFor="firstName" className="block text-gray-700 text-sm font-medium">
+              <label htmlFor="firstName" 
+                     className="block text-gray-700 text-sm font-medium">
                 First Name
               </label>
               <input
@@ -58,11 +47,13 @@ const SignUp = () => {
                 name="firstName"
                 autoComplete="given-name"
                 className="mt-1 p-2 w-full border rounded-md"
+                onChange={(e)=>setFirstName(e.target.value)}
                 required
               />
             </div>
             <div>
-              <label htmlFor="lastName" className="block text-gray-700 text-sm font-medium">
+              <label htmlFor="lastName" 
+                     className="block text-gray-700 text-sm font-medium">
                 Last Name
               </label>
               <input
@@ -71,11 +62,13 @@ const SignUp = () => {
                 name="lastName"
                 autoComplete="family-name"
                 className="mt-1 p-2 w-full border rounded-md"
+                onChange={(e)=>setLastName(e.target.value)}
                 required
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-gray-700 text-sm font-medium">
+              <label htmlFor="email" 
+                     className="block text-gray-700 text-sm font-medium">
                 Email Address
               </label>
               <input
@@ -84,11 +77,13 @@ const SignUp = () => {
                 name="email"
                 autoComplete="email"
                 className="mt-1 p-2 w-full border rounded-md"
+                onChange={(e)=>setEmail(e.target.value)}
                 required
               />
             </div>
             <div>
-              <label htmlFor="password" className="block text-gray-700 text-sm font-medium">
+              <label htmlFor="password" 
+                     className="block text-gray-700 text-sm font-medium">
                 Password
               </label>
               <input
@@ -97,6 +92,7 @@ const SignUp = () => {
                 name="password"
                 autoComplete="new-password"
                 className="mt-1 p-2 w-full border rounded-md"
+                onChange={(e)=>setPassword(e.target.value)}
                 required
               />
             </div>
@@ -109,17 +105,11 @@ const SignUp = () => {
               </span>
             </label>
           </div>
-          <button
-            type="submit"
-            className="bg-secondary-main text-white px-4 py-2 rounded-md mt-3 mb-2 w-full"
-          >
-            Sign Up
-          </button>
-
-          {/* New SignUp button with a bluish gradient */}
+        
+          </form>
           <button
             className="bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 text-white px-4 py-2 rounded-md w-full"
-            onClick={() => console.log("SignUp button clicked")}
+            
           >
             SignUp
           </button>
@@ -129,7 +119,7 @@ const SignUp = () => {
               Already have an account? Sign in
             </a>
           </div>
-        </form>
+        
       </div>
       
     </div>
